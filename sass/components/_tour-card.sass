@@ -1,0 +1,82 @@
+.card-tour
+    height: 52rem
+    position: relative
+    &__side
+        height: 52rem
+        color: $color-white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        transition: all .7s ease-out
+        overflow: hidden
+        backface-visibility: hidden
+        background: $color-white
+        &_front
+        &_back
+            background: linear-gradient(90deg, rgba($color-light-brown, .70) 0.03%, rgba($color-dark-brown, .70) 99.94%)
+            transform: rotateY(-180deg)
+    &:hover &__side_front
+        transform: rotateY(180deg)
+    &:hover &__side_back
+        transform: rotateY(0)
+    &__img
+        height: 22rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        margin-bottom: 4.5rem
+        background-blend-mode: hard-light
+        &_1
+            background: $color-light-brown url(../img/22.jpg) center / cover no-repeat
+        &_2
+            background: $color-light-brown url(../img/11.jpg) center / cover no-repeat
+        &_3
+            background: $color-light-brown url(../img/33.jpg) center / cover no-repeat
+    &__title
+    &__span
+            background: linear-gradient(90deg, rgb(186 133 84), rgb(161 79 3))
+            padding: 1rem 2rem .3rem 2rem
+            color: #fff
+            text-transform: uppercase
+            font-weight: 300
+            &_1
+                position: absolute
+                top: 16rem
+                right: 0
+                padding-bottom: 1rem
+            &_2
+                position: absolute
+                top: 19.5rem
+                right: 0
+                padding-bottom: 1rem
+    &__descr
+        ul
+            list-style: none
+            width: 75%
+            margin: 0 auto
+            text-align: center
+            li
+                display: inline-block
+                border-bottom: 1px solid #878787
+                font-size: 1.6rem
+                color: #878787
+                letter-spacing: .2rem
+                &:not(:last-child)
+                    margin-bottom: 2rem
+    &__backside-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 8rem
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        &_1
+            font-size: 1.6rem
+            font-weight: 300
+        &_2
+            font-size: 6rem
+            font-weight: 500
