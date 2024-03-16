@@ -118,11 +118,6 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
-  line-height: 140%;
-}
-
-.text-align-center {
-  text-align: center;
 }
 
 .mb-10 {
@@ -609,5 +604,5 @@ body {
 
 .section-book {
   padding: 10rem;
-  background: linear-gradient(90deg, #ba8554, #a14f03);
+  background: linear-gradient(90deg, rgba #BA8554 rgba #A14F03);
 }/*# sourceMappingURL=main.css.map */
