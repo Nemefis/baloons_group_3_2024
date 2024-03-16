@@ -152,7 +152,7 @@ body {
   text-align: center;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -163,6 +163,7 @@ body {
   transition: all 0.3s;
   position: relative;
   font-size: 2rem;
+  border: none;
 }
 .btn:hover {
   transform: translateY(-0.4rem);
@@ -192,6 +193,10 @@ body {
 .btn_animated {
   animation: BtnToUp 0.5s ease-out 0.7s;
   animation-fill-mode: backwards;
+}
+.btn_brown {
+  background: #A14F03;
+  color: #fff;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -470,6 +475,9 @@ body {
   border-radius: 0.5rem;
   border: none;
   border-bottom: 0.3rem solid transparent;
+  width: 65%;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  transition: 0.5s all;
 }
 .form__input:focus {
   border-bottom: 0.3rem solid #66D763;
@@ -484,6 +492,8 @@ body {
   letter-spacing: 0.2rem;
   font-weight: 400;
   display: block;
+  margin-top: 1rem;
+  transition: 0.2s all;
 }
 .form__input:-moz-placeholder-shown + .form__label {
   opacity: 0;
@@ -494,6 +504,45 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3rem);
+}
+.form__group-radio {
+  width: 40%;
+  display: inline-block;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+}
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s all;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
 }
 
 .header {
@@ -604,5 +653,6 @@ body {
 
 .section-book {
   padding: 10rem;
-  background: linear-gradient(90deg, rgba #BA8554 rgba #A14F03);
+  background: rgb(195, 149, 106);
+  background: linear-gradient(160deg, rgb(195, 149, 106) 0%, rgb(161, 79, 3) 78%);
 }/*# sourceMappingURL=main.css.map */
