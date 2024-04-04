@@ -1,15 +1,18 @@
-.section-feedback
-    position: relative
-    padding: 8rem 0
-.feedback-card
+.feedBack-card
     width: 85%
     background: rgba($color-white, 0.75)
     box-shadow: $box-shadow
     margin: 0 auto
     padding: 6rem
     transform: skewX(330deg)
+    @include respond(tab-port)
+        transform: skewX(350deg)
+        padding: 3rem
     & > *
         transform: skewX(-330deg)
+        @include respond(tab-port)
+            transform: skewX(-350deg)
+            text-align: center
     &__img
         width: 15rem
         height: 15rem
@@ -21,10 +24,16 @@
         margin-right: 4rem
         overflow: hidden
         position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 3rem
         img
             height: 100%
             transform: scale(1.2)
             transition: all .5s
+            
+
     &__name
         font-size: 2rem
         letter-spacing: .2rem
