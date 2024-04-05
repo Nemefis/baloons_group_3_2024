@@ -10,7 +10,6 @@
         display: table
         clear: both
 
-
 @mixin phone
     @media (max-width: 600px)
         @content
@@ -23,7 +22,6 @@
     - big-screen
 
     */
-
 
 @mixin respond($breakpoint)
     @if $breakpoint == phone 
@@ -41,11 +39,3 @@
     @if $breakpoint == big-screen
         @media only screen and (min-width: 1800px)
             @content
-
-    
-
-    
-
-        
-
-    
