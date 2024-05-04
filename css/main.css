@@ -64,7 +64,7 @@ html {
 }
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 30%;
+    font-size: 40%;
   }
 }
 @media only screen and (min-width: 1800px) {
@@ -931,6 +931,14 @@ body {
   cursor: pointer;
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
 }
+@media only screen and (max-width: 600px) {
+  .navigation__button {
+    width: 5rem;
+    height: 5rem;
+    top: 8rem;
+    right: 8rem;
+  }
+}
 .navigation__background {
   width: 6rem;
   height: 6rem;
@@ -942,6 +950,14 @@ body {
   z-index: 100;
   transition: all 0.7s;
   /* transform: scale(80) */
+}
+@media only screen and (max-width: 600px) {
+  .navigation__background {
+    width: 5rem;
+    height: 5rem;
+    top: 8rem;
+    right: 8rem;
+  }
 }
 .navigation__nav {
   height: 100vh;
@@ -994,6 +1010,11 @@ body {
 .navigation__icon {
   position: relative;
   margin-top: 3.7rem;
+}
+@media only screen and (max-width: 600px) {
+  .navigation__icon {
+    margin-top: 2.5rem;
+  }
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
